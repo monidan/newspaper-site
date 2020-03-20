@@ -1,4 +1,301 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+body { background-color: rgb(245,239,235);}
+
+/* Container properties*/
+
+#container {
+    width: 80%; 
+    min-height: 40%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+/*Header Styles*/
+
+#mainHeader{
+    width: 100%;
+    min-height: 40%;
+}
+
+#mainHeader .nav-bar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+#mainHeader .nav-bar .logo h1{
+    color:white;
+    float: left;
+    margin-left: 100px;
+}
+
+#mainHeader .nav-bar nav {
+    margin-right: 100px;
+}
+
+#mainHeader .nav-bar nav ul {
+    float: right;
+}
+
+#mainHeader .nav-bar nav ul li{
+    display: flex;
+    float: right;
+}
+
+#mainHeader .nav-bar nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 15px 14px;
+}
+
+#mainHeader .nav-bar nav ul li a:hover{
+    background-color: white;
+    color:black;
+}
+
+/*Centered Logo*/
+
+#mainHeader .centered-logo{
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+
+#mainHeader .centered-logo a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+/*    margin-left: 20%;*/
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+
+#mainHeader .centered-logo h2{
+    margin-left: 15%;
+    padding-top: 3%;
+}
+
+#mainHeader .centered-logo p{
+    margin-left: 15%;
+}
+
+/*Designing article*/
+
+#mainHeader article{
+    width:80%;
+    min-height: 50%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#mainHeader .main-article-header{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+#mainHeader .main-article-header p {
+    width: 150px;
+    float: right;
+    font-size: 13px;
+}
+    
+#mainHeader .main-article-header p a{
+    text-decoration: none;
+    color: black;
+}
+
+#mainHeader .body-article {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 40%;
+/*    margin-left: 6%;*/
+    line-height: 1.5;
+    font-size: 17px;
+    font-family: 'Arial', sans-serif;
+}
+
+#mainHeader .body-article figcaption{
+    padding-bottom: 20px;
+    color: rgb(45,45,45);
+}
+
+#mainHeader .body-article img{
+    width: 100%;
+}
+
+#mainHeader .body-article figcaption a{
+    text-decoration: none;
+    color: rgb(45,45,45);
+    border-bottom: 1.5px solid rgb(45,45,45);
+}
+
+#mainHeader .body-article figcaption a:hover{
+    border: 0px solid;
+    color: blue;
+}
+
+/*Section of ordinary news*/
+
+main{
+    width: 100%;
+    min-height: 40%;
+}
+
+main .secondary-news-header{
+    text-align: center;
+    margin-right: 20px;
+}
+
+main .secondary-news-header h2{
+    text-transform: uppercase;
+    line-height: 4;
+}
+
+main #container{
+    height: 500px;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 1px solid white;
+    background-color: rgb(245,239,235);
+}
+
+main .first-article{
+    width: 49%;
+    float: left;
+    margin-top: 40px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+main .second-article{
+    width: 49%;
+    margin-top: 40px;
+    border-left: 1ps solid black;
+    float: right;
+    text-align: center;
+}
+
+main .first-article img{
+    width: 50%;
+    padding: 5% 15%;
+}
+
+main .second-article img{
+    width: 50%;
+    padding: 5% 10%;
+}
+
+main .first-article figcaption{
+    width: 300px;   
+    margin: 0 25%;
+}
+
+main .second-article figcaption{
+    width: 300px; 
+    margin: 0 25%;
+}
+
+main .first-article a{
+    text-decoration: none;
+    color: black;
+}
+
+main .second-article a{ 
+    text-decoration: none;
+    color: black;
+}
+
+/*Ad section*/
+
+aside{
+    width: 100%;
+    min-height: 200px;
+}
+
+aside #container {
+    min-height: 200px;
+    background-color: white;
+}
+
+aside #container section {
+    width: 50%;
+    display: block;
+    position: relative;
+    top: 35px;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+}
+    
+aside #container section p{
+    padding-bottom: 15px;
+}
+
+aside #container section a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    background-color: black;
+    text-transform: uppercase;
+    padding: 2% 3%;
+}
+
+aside #container section a:hover{
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+}
+
+/*Footer section*/
+
+#page-footer {
+    width: 100%;
+    height: 120px;
+}
+
+#page-footer #container {
+    background-color: black;
+    height: 120px;
+    color: white;
+}
+
+#page-footer .right-column{
+    float: right;
+    padding: 35px 80px;
+}
+
+#page-footer .left-column{
+    float: left;
+    padding: 35px 80px;
+}
+
+#page-footer .right-column a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    transition-duration: .3s;
+}
+
+#page-footer .right-column a:hover{
+    border-bottom: 1px solid white;
+}
+
+#page-footer .left-column p{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
 }
