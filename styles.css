@@ -1,58 +1,80 @@
-*{
+/*Global styles
+---------------------------------------------*/
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body { 
+    background-color: rgb(245,239,235);
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
-body { background-color: rgb(245,239,235);}
+h1, h2, p, figcaption, figure{
+    margin: 0;
+}
 
-/* Container properties*/
+a{
+    color: black;
+    text-decoration: none;
+}
 
-#container {
+/* Container properties
+---------------------------------------------*/
+
+.container {
     width: 80%; 
-    min-height: 40%;
     background-color: white;
     margin: 0 auto;
 }
 
-/*Header Styles*/
+/*Header Styles
+---------------------------------------------*/
 
 #mainHeader{
     width: 100%;
     min-height: 40%;
 }
 
+/*Navigation 
+---------------------------------------------*/
+
 #mainHeader .nav-bar{
     width: 100%;
-    height: 50px;
+    max-height: 50px;
     background-color: black;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
 
 #mainHeader .nav-bar .logo h1{
     color:white;
-    float: left;
-    margin-left: 100px;
-}
-
-#mainHeader .nav-bar nav {
-    margin-right: 100px;
 }
 
 #mainHeader .nav-bar nav ul {
-    float: right;
-}
-
-#mainHeader .nav-bar nav ul li{
+    list-style-type: none;
     display: flex;
-    float: right;
+    justify-content: flex-start ;
+    align-content: space-around;
 }
 
 #mainHeader .nav-bar nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    margin: auto;
     text-align: center;
     padding: 15px 14px;
 }
@@ -62,11 +84,12 @@ body { background-color: rgb(245,239,235);}
     color:black;
 }
 
-/*Centered Logo*/
+/*Centered Logo
+---------------------------------------------*/
 
 #mainHeader .centered-logo{
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     border-bottom: 1px solid rgb(219,219,219);
 }
 
@@ -74,7 +97,6 @@ body { background-color: rgb(245,239,235);}
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-/*    margin-left: 20%;*/
     font-size: 50px;
     letter-spacing: 6px;
 }
@@ -86,9 +108,11 @@ body { background-color: rgb(245,239,235);}
 
 #mainHeader .centered-logo p{
     margin-left: 15%;
+    font-family: 'Playfair Display', serif;
 }
 
-/*Designing article*/
+/*Main article
+---------------------------------------------*/
 
 #mainHeader article{
     width:80%;
@@ -99,30 +123,32 @@ body { background-color: rgb(245,239,235);}
 
 #mainHeader .main-article-header{
     width: 80%;
-    height: 100px;
-    margin: 0 auto;
-    margin-top: 3%;
+    min-height: 10%;
+    margin: 7% auto 10%;
 }
 
 #mainHeader .main-article-header p {
     width: 150px;
     float: right;
     font-size: 13px;
+    margin: 15px auto;
+    color: #343434;
 }
-    
-#mainHeader .main-article-header p a{
-    text-decoration: none;
-    color: black;
+
+#mainHeader .main-article-header a{
+    color:#343434;
+}
+
+#mainHeader .main-article-header p a:hover{
+    text-decoration: underline;
 }
 
 #mainHeader .body-article {
     width: 80%;
-    margin: 0 auto;
     min-height: 40%;
-/*    margin-left: 6%;*/
+    margin: 0 auto;
     line-height: 1.5;
     font-size: 17px;
-    font-family: 'Arial', sans-serif;
 }
 
 #mainHeader .body-article figcaption{
@@ -135,157 +161,137 @@ body { background-color: rgb(245,239,235);}
 }
 
 #mainHeader .body-article figcaption a{
-    text-decoration: none;
     color: rgb(45,45,45);
-    border-bottom: 1.5px solid rgb(45,45,45);
 }
 
 #mainHeader .body-article figcaption a:hover{
-    border: 0px solid;
+    text-decoration: underline;
     color: blue;
 }
 
-/*Section of ordinary news*/
+/*Section of an ordinary news
+---------------------------------------------*/
 
 main{
     width: 100%;
-    min-height: 40%;
+    max-height: 40%;
 }
 
-main .secondary-news-header{
-    text-align: center;
-    margin-right: 20px;
-}
-
-main .secondary-news-header h2{
-    text-transform: uppercase;
-    line-height: 4;
-}
-
-main #container{
-    height: 500px;
-    min-height: 400px;
+main .container{
     margin: 0 auto;
     border: 1px solid white;
     background-color: rgb(245,239,235);
 }
 
-main .first-article{
-    width: 49%;
-    float: left;
-    margin-top: 40px;
-    border-right: 1px solid black;
+
+main .article-container{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
 }
 
-main .second-article{
-    width: 49%;
-    margin-top: 40px;
-    border-left: 1ps solid black;
-    float: right;
+main .container-for-secondary-news{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .article-container .article-item{
+    width:49%;
+    margin: 50px;
     text-align: center;
+    flex: 1 0 10%;
 }
 
-main .first-article img{
-    width: 50%;
-    padding: 5% 15%;
+main .article-container header:first-child{
+    flex: 0 1 100%;
+    text-transform: uppercase;
+    border-bottom: 1px dashed black;
+    padding-bottom: 30px;
 }
 
-main .second-article img{
-    width: 50%;
-    padding: 5% 10%;
+main .article-container img{
+    width: 80%;
 }
 
-main .first-article figcaption{
-    width: 300px;   
-    margin: 0 25%;
-}
-
-main .second-article figcaption{
-    width: 300px; 
-    margin: 0 25%;
-}
-
-main .first-article a{
-    text-decoration: none;
+main .article-container a{
     color: black;
+    font-size: 17px;
 }
 
-main .second-article a{ 
-    text-decoration: none;
-    color: black;
-}
 
-/*Ad section*/
+/*Ad section
+---------------------------------------------*/
 
 aside{
     width: 100%;
-    min-height: 200px;
+    max-height: 20%;
 }
 
-aside #container {
-    min-height: 200px;
+aside .container {
+    max-height: 20%;
     background-color: white;
+    padding: 50px;
 }
 
-aside #container section {
+aside .container section {
     width: 50%;
     display: block;
-    position: relative;
-    top: 35px;
-    height: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    max-height: 20%;
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;
 }
-    
-aside #container section p{
-    padding-bottom: 15px;
+
+aside .container p{
+    padding: 10px; 
 }
 
-aside #container section a{
-    text-decoration: none;
-    display: inline-block;
+aside .container section a{
+    display: inline-block;    
     color: white;
-    font-size: 18px;
+    font-size: 1em;
     background-color: black;
     text-transform: uppercase;
     padding: 2% 3%;
+    margin: 10px 0;
+    border: 1px solid transparent;
 }
 
-aside #container section a:hover{
+aside .container section a:hover{
     background-color: white;
     color:black;
     border: 1px solid black;
 }
 
-/*Footer section*/
+/*Footer section
+---------------------------------------------*/
 
 #page-footer {
     width: 100%;
-    height: 120px;
+    max-height: 10%;
 }
 
-#page-footer #container {
+#page-footer .container {
     background-color: black;
-    height: 120px;
+    max-height: 10%;
     color: white;
 }
 
+#page-footer .footer-items{
+    display: flex;
+    justify-content: space-around;
+}
+
 #page-footer .right-column{
-    float: right;
     padding: 35px 80px;
+    line-height: 1.5;
 }
 
 #page-footer .left-column{
-    float: left;
     padding: 35px 80px;
 }
 
 #page-footer .right-column a{
-    text-decoration: none;
     color: white;
     font-family: 'Arial', sans-serif;
     transition-duration: .3s;
@@ -298,4 +304,97 @@ aside #container section a:hover{
 #page-footer .left-column p{
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
+}
+
+/*Responsive 
+---------------------------------------------*/
+
+@media screen and (max-width:920px){
+    #page-footer .footer-items{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #page-footer .right-column{
+        line-height: 1.5;
+        flex: 1 0 20%;
+    }
+
+    #page-footer .left-column{
+        padding-top: 0;
+        flex: 1 0 100%;
+    }
+    
+    #mainHeader .centered-logo{
+        text-align: center;
+    }
+    
+    #mainHeader .centered-logo h2, #mainHeader .centered-logo p{
+        margin: 0;
+        padding: 0;
+    }
+    
+    main .container-for-secondary-news{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    main .article-container .ordinary-news-article{
+        flex: 1 0 100%;
+    }
+    
+    #mainHeader .main-article-header p {
+        width: 150px;
+        min-height: 5%;
+        float: left;
+    }
+    
+    #mainHeader .body-article{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 540px){
+    #mainHeader .nav-bar{
+        max-height: 100px;
+        justify-content: center;
+    }
+    
+    #mainHeader .nav-bar .logo h1{
+        flex: 1 0 100%;
+    }
+    
+    #mainHeader .nav-bar nav ul{
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    
+    #mainHeader .nav-bar nav ul li a{
+        padding: 10px 10px;
+        flex: 1 0 10%;
+    }
+    
+    #mainHeader .nav-bar nav ul li a:hover{
+        background: none;
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .container{
+        width: 100%;
+    }
+    
+    aside .container section {
+        width: 90%;
+        display: block;
+        max-height: 20%;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid black;
+    }
 }

@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='description' content="Kyiv Times newspaper tells us about some of the game news and recommends another ones.">
     <title>Kyiv Times</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/kyiv-times-icon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!--******************************MAIN ARTICLE******************************-->
+
 <header role="banner" id="mainHeader">
-    <div id="container">
+    <div class="container">
+<!--******************************Navigation Bar******************************-->
         <div class="nav-bar">
            <div class="logo">
                <a href="#"><h1>KT</h1></a>
@@ -24,11 +28,12 @@
                 </ul>
             </nav>
         </div>
+        
         <div class="centered-logo">
                 <a href="#"><h2> Kyiv Times</h2></a>
                 <p><em>Tuesday <time datetime="2020-03-17" itemprop="datePublished">March 17 2020</time></em></p>
         </div>
-        
+<!--******************************Main Article Has Started******************************-->
         <article role="article">
             <header class = "main-article-header">
                 <h2 itemprop="headline">Top-Earning Video Gamers: The Ten Highest-Paid Players Pocketed More Than $120 Million In 2019</h2>
@@ -39,7 +44,7 @@
                         <figure>
                            <figcaption>
                                <p>
-                        <i>Fortnite’s World Cup drew 19,000 fans to New York’s Arthur Ashe stadium.</i> <br> <br>
+                        <i> <br> Fortnite’s World Cup drew 19,000 fans to New York’s Arthur Ashe stadium.</i> <br> <br>
 
                         In the world of professional video games, winning isn’t everything.  Fortnite phenom Tyler “Ninja” Blevins made $17 million last year, enough for first place on Forbes’ inaugural ranking of top-earning gamers, but the 28-year-old pro won less than $100,000 competing. In fact, Ninja didn’t even qualify for the first-ever Fortnite World Cup, which was held in New York’s Arthur Ashe stadium last July, or its $3 million grand prize. (That money was won by Kyle “Bugha” Giersdorf, a 16-year old from Pennsylvania).
 
@@ -55,53 +60,63 @@
     </div>
 </header>
 
+<!--*********************************************SECONDARY ARTICLES*********************************************-->
+
 <main role="main" itemscope itemtype="https://schema.org/NewsArticle">
-    <div id="container">
-       <header class="secondary-news-header"><h2>More news : </h2></header>
-        <article role="article" class="first-article">
-            <figure>
-                <img src="images/secondary-article-1.jpg" alt="Studying while COVID-19">
-                <figcaption>
-                    <h3>
-                       <a href="#" itemprop="headline">
-                        <b>Free Software That Businesses, Schools And Others Can Use During The COVID-19 Crisis</b>
-                        </a>
-                    </h3>
-                </figcaption>
-            </figure>
-        </article>
-        
-        <article role="article" class="second-article">
-            <figure>
-                <img src="images/secondary-article-2.jpg" alt="Article about Trump">
-                <figcaption>
-                    <h3>
-                    <a href="#" itemprop="headline"><b>Trump Says No Need For A National Lockdown: ‘I Don’t Think We’ll Ever Find That Necessary’</b></a>
-                    </h3>
-                </figcaption>
-            </figure>
-        </article>
+    <div class="container article-container">
+       <header class="secondary-news-header article-item"><h2>More news : </h2></header>
+<!--******************************First Article******************************-->
+        <div class="container-for-secondary-news">
+               <article role="article" class="first-article article-item ordinary-news-article">
+                <figure>
+                    <img src="images/covid19-freesoftware.jpg" alt="Studying while COVID-19">
+                    <figcaption>
+                        <h3>
+                           <a href="#" itemprop="headline">
+                            <b>Free Software That Businesses, Schools And Others Can Use During The COVID-19 Crisis</b>
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </article>
+
+    <!--******************************Second Article******************************-->
+            <article role="article" class="second-article article-item ordinary-news-article">
+                <figure>
+                    <img src="images/trump-lockdown.jpg" alt="Article about Trump">
+                    <figcaption>
+                        <h3>
+                        <a href="#" itemprop="headline"><b>Trump Says No Need For A National Lockdown: ‘I Don’t Think We’ll Ever Find That Necessary’</b></a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
     </div>
 </main>
 
+<!--******************************Ad Block ******************************-->
+
 <aside role="complementary">
-    <div id="container">
+    <div class="container ad-container">
         <section>
-            <p>Want to recieve notifications if we post something new? Then hit the subscription button below!</p>
+            <p>Want to recieve notifications if we post something new? <br> Then hit the subscription button below!</p>
             <a href="#" class="sub-button">Subscribe</a>
         </section>
     </div>    
 </aside>
 
+<!--******************************Contact Info******************************-->
+
 <footer role="contentinfo" id="page-footer">
-    <div id="container">
+    <div class="container footer-items">
+       <div class="left-column">
+            <p><b>© Kyiv Times Limited 2020.</b></p>
+            <p>Registered in Kyiv No.72503.</p>
+        </div>
         <div class="right-column">
             <p><a href="#" title="give us a call">T:  (123)-456-78-90</a></p>
             <p><a href="#" title="drop us a line">kyivtimes@newspaper.com</a></p>
-        </div>
-        <div class="left-column">
-            <p><b>© Kyiv Times Limited 2020.</b></p>
-            <p>Registered in Kyiv No.72503.</p>
         </div>
     </div>
 </footer>
